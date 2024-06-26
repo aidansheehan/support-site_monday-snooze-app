@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - Snooze App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .step {
+            margin-bottom: 20px;
+            background: white;
+            border-left: 5px solid #10b981; /* Tailwind green-500 for a fun touch */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .step-img {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+            border: 3px solid #fbbf24; /* Tailwind amber-400 for highlight */
+            border-radius: 5px;
+        }
+        .important {
+            color: #ef4444; /* Tailwind red-500 for emphasis */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-lg font-bold">Monday Snooze App - How to Use</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">How to Use</a></li>
+                    <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:underline">Terms of Use</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto mt-8 mb-">
+        <section class="step">
+            <h2 class="text-xl font-bold mb-2">Step 1: Install the App</h2>
+            <p>Click on the link below to install the Snooze App.</p>
+            <a href="#" class="text-blue-500 hover:underline">Install the Snooze App</a>
+        </section>
+        <section class="step">
+            <h2 class="text-xl font-bold mb-2">Step 2: Authenticate the App</h2>
+            <p>Follow the authentication process to allow the app to access your data securely.</p>
+            <a href="#" class="text-blue-500 hover:underline">Authenticate the App</a>
+        </section>
+        <section class="step">
+            <h2 class="text-xl font-bold mb-2">Step 3: Using the App</h2>
+            <p>Click on the three dots next to an item and select <span class="important">'Snooze'</span>. Choose the time to snooze the item for and click <span class="important">'Snooze'</span>.</p>
+            <!-- Placeholder for images -->
+            <div><img src="images/step-1.png" alt="Step 3 Image 1 - Click 3 dots" class="step-img"></div>
+            <div><img src="images/step-2.png" alt="Step 3 Image 2 - Menu Open" class="step-img"></div>
+        </section>
+        <section class="step">
+            <h2 class="text-xl font-bold mb-2">Step 4: Team Visibility and Notification</h2>
+            <p>Once an item is snoozed, it will be marked accordingly, and your team can see that it has been snoozed. This helps manage expectations and keeps everyone informed about task statuses without manual updates.</p>
+            <div><img src="images/step-3.png" alt="Snoozed Item Visibility" class="step-img"></div>
+            <p>When the snooze period expires, the item returns to its original state and a notification is sent to remind you to address the item. This ensures that nothing slips through the cracks.</p>
+            <div><img src="images/step-4.png" alt="Notification of Item Return" class="step-img"></div>
+        </section>
+    </main>
+    <footer class="bg-gray-200 text-center p-4 mt-8 bottom-0 w-full">
+        <p>© 2024 Aidan Sheehan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

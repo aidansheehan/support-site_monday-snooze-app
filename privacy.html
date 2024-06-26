@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Snooze App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .step {
+            margin-bottom: 20px;
+            background: white;
+            border-left: 5px solid #10b981; /* Tailwind green-500 for a fun touch */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .step-img {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+            border: 3px solid #fbbf24; /* Tailwind amber-400 for highlight */
+            border-radius: 5px;
+        }
+        .important {
+            color: #ef4444; /* Tailwind red-500 for emphasis */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-lg font-bold">Privacy Policy</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">How to Use</a></li>
+                    <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:underline">Terms of Use</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto mt-8 p-4 bg-white rounded shadow">
+        <section>
+            <p>This Privacy Policy describes how your personal information is collected, used, and shared when you use the Snooze App.</p>
+            <h2 class="text-xl font-bold mt-4">Personal Information We Collect</h2>
+            <p>When you use the Snooze App, we collect the following information:</p>
+            <ul>
+                <li>Monday user ID</li>
+                <li>Board ID</li>
+                <li>Ticket ID</li>
+                <li>Access token to authenticate and authorize your account (stored securely in monday.com's SecureStorage)</li>
+            </ul>
+            <h2 class="text-xl font-bold mt-4">How We Use Your Information</h2>
+            <p>We use this information to:</p>
+            <ul>
+                <li>Enable the functionality of the Snooze and Unsnooze features on your boards</li>
+                <li>Manage the app's integration with the monday.com platform</li>
+            </ul>
+            <h2 class="text-xl font-bold mt-4">Sharing Your Information</h2>
+            <p>We do not share your personal information with any third parties, except as necessary to provide our services or as required by law.</p>
+        </section>
+    </main>
+    <footer class="bg-gray-200 text-center p-4 mt-8">
+        <p>© 2024 Aidan Sheehan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
