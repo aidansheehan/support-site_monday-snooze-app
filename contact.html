@@ -29,23 +29,53 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-blue-600 text-white p-4">
+    <header class="bg-blue-600 text-white p-4 fixed w-full">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-lg font-bold">Monday Snooze App - Contact Me</h1>
-            <nav>
+            <nav class="hidden md:flex space-x-4 items-center justify-between w-full">
                 <ul class="flex space-x-4">
                     <li><a href="index.html" class="hover:underline">How to Use</a></li>
-                    <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
                     <li><a href="terms.html" class="hover:underline">Terms of Use</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                    <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
                 </ul>
+                <a href="https://auth.monday.com/oauth2/authorize?client_id=b4c8fabdeb58d5ccb9f8666de1fab530&response_type=install" class="ml-4 hidden md:flex">
+                    <img alt="Add to monday.com" height="42" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/Tal/4b5d9548-0598-436e-a5b6-9bc5f29ee1d9_Group12441.png" class="h-10 w-auto"/>
+                </a>
             </nav>
+            <div class="w-full flex justify-between items-center space-x-4 md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <a href="https://auth.monday.com/oauth2/authorize?client_id=b4c8fabdeb58d5ccb9f8666de1fab530&response_type=install" class="ml-4">
+                    <img alt="Add to monday.com" height="42" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/Tal/4b5d9548-0598-436e-a5b6-9bc5f29ee1d9_Group12441.png" class="h-10 w-auto"/>
+                </a>
+            </div>
         </div>
+        <nav id="menu" class="md:hidden hidden">
+            <ul class="flex flex-col space-y-4 mt-4">
+                <li><a href="index.html" class="hover:underline">How to Use</a></li>
+                <li><a href="terms.html" class="hover:underline">Terms of Use</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+            </ul>
+        </nav>
     </header>
-    <main class="container mx-auto text-center mt-8 p-4 bg-white rounded shadow">
+    <main class="container mx-auto text-center mt-28 p-4 bg-white rounded shadow">
         <p>If you have any questions or need support, feel free to reach out to me at: <br><a href="mailto:aidanmsheehan@gmail.com" class="text-blue-500 hover:underline">aidanmsheehan@gmail.com</a></p>
     </main>
     <footer class="text-center p-4">
         © 2024 Aidan Sheehan. All rights reserved.
     </footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('block');
+        });
+    </script>
 </body>
 </html>
