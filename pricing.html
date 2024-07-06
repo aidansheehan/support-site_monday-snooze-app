@@ -28,6 +28,8 @@
     width: auto; /* Adjust width to fit content */
     max-width: 400px; /* Ensuring it doesn't get too wide on larger screens */
     text-align: center;
+    min-width: 300px;
+    min-height: 250px;
 }
 
 .price-header {
@@ -91,23 +93,30 @@
             </ul>
         </nav>
     </header>
-    <main class="container mx-auto text-center mt-28 p-4 bg-white rounded shadow items-center justify-center flex flex-col">
-        <!-- <div class="price-card bg-blue"> -->
-            <!-- <div class="price-header">Flat Rate for Teams of All Sizes</div>
-            <div class="price-tag">$10 / month</div>
-            <div class="feature">Unlimited snoozes</div>
-            <div class="feature">Full access to all features</div>
-            <div class="feature">Email support</div> -->
-        <!-- </div> -->
-        <!-- <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-80"> -->
-            <h2 class="text-xl font-bold mb-4">Flat Rate for Teams of All Sizes</h2>
-            <p class="text-2xl text-green-500 font-bold">$10 / month</p>
-            <ul class="list-none pl-8 text-left mt-4">
-                <li><span class="tick">&#10003;</span> Unlimited snoozes</li>
-                <li><span class="tick">&#10003;</span> Full access to all features</li>
-                <li><span class="tick">&#10003;</span> Email support</li>
-            </ul>
-        <!-- </div> -->
+    <main class="container mx-auto text-center mt-28 p-4 bg-white rounded shadow">
+        <h1 class="text-lg font-bold w-full text-center mb-8">Pricing Options</h1>
+        <div class="items-center justify-center flex flex-col md:flex-row gap-2.5" >
+            <div class="price-card mx-2">
+                <h2 class="text-xl font-bold mb-4">Monthly Subscription</h2>
+                <p class="text-2xl text-green-500 font-bold">$10 / month</p>
+                <ul class="list-none pl-8 text-left mt-4">
+                    <li><span class="tick">&#10003;</span> Unlimited snoozes</li>
+                    <li><span class="tick">&#10003;</span> Full access to all features</li>
+                    <li><span class="tick">&#10003;</span> Email support</li>
+                </ul>
+            </div>
+            <div class="price-card mx-2">
+                <h2 class="text-xl font-bold mb-4">Annual Subscription</h2>
+                <p class="text-2xl text-green-500 font-bold">$8 / month</p>
+                <p class="text-md text-green-500">$96 billed yearly</p>
+                <ul class="list-none pl-8 text-left mt-4">
+                    <li><span class="tick">&#10003;</span> Unlimited snoozes</li>
+                    <li><span class="tick">&#10003;</span> Full access to all features</li>
+                    <li><span class="tick">&#10003;</span> Email support</li>
+                </ul>
+            </div>
+        </div>
+
     </main>
     <footer class="bg-gray-200 text-center p-4 mt-8 bottom-0 w-full">
         <p>© 2024 Aidan Sheehan. All rights reserved.</p>
