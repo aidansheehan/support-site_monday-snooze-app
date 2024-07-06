@@ -1,31 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Snooze App</title>
+    <title>Pricing - Snooze App</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
+        body {
+            font-family: 'Roboto', sans-serif;
         }
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100%;
-            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
         }
         main {
             flex: 1;
-            display: flex;
-            align-items: center; /* Center content vertically */
-            justify-content: center; /* Center content horizontally */
         }
-        footer {
-            background: #f3f3f3; /* Example background color */
-        }
+        .price-card {
+    /* background: #ffffff; Adjust to fit theme's light color scheme */
+    border: none; /* Removing border for a cleaner look */
+    border-radius: 8px; /* Softened corners to match overall UI style */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: auto; /* Adjust width to fit content */
+    max-width: 400px; /* Ensuring it doesn't get too wide on larger screens */
+    text-align: center;
+}
+
+.price-header {
+    font-size: 1.5rem; /* Slightly reduced for better proportion */
+    color: #1a202c; /* Dark gray for better readability */
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.price-tag {
+    font-size: 2rem; /* Slightly reduced for consistency */
+    color: #10b981; /* Maintained green for price visibility */
+    font-weight: bold;
+    margin: 0.5rem 0; /* Reduced margin for compact look */
+}
+
+.feature {
+    margin: 0.5rem 0;
+    color: #4a5568; /* Darker gray for features for readability */
+    font-size: 1rem;
+}
+.tick {
+    color: #10b981; /* Tailwind's green-500 for the tick color */
+}
+
     </style>
 </head>
 <body class="bg-gray-100">
@@ -57,18 +84,33 @@
         <nav id="menu" class="md:hidden hidden">
             <ul class="flex flex-col space-y-4 mt-4">
                 <li><a href="index.html" class="hover:underline">How to Use</a></li>
-                <li><a href="pricing.html" class="hover:underline">Pricing</a></li>
+                <li><a href="pricing.html" class="hover:underline" >Pricing</a></li>
                 <li><a href="contact.html" class="hover:underline">Contact</a></li>
                 <li><a href="terms.html" class="hover:underline">Terms of Use</a></li>
                 <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container mx-auto text-center mt-28 p-4 bg-white rounded shadow">
-        <p>If you have any questions or need support, feel free to reach out to me at: <br><a href="mailto:aidanmsheehan@gmail.com" class="text-blue-500 hover:underline">aidanmsheehan@gmail.com</a></p>
+    <main class="container mx-auto text-center mt-28 p-4 bg-white rounded shadow items-center justify-center flex flex-col">
+        <!-- <div class="price-card bg-blue"> -->
+            <!-- <div class="price-header">Flat Rate for Teams of All Sizes</div>
+            <div class="price-tag">$10 / month</div>
+            <div class="feature">Unlimited snoozes</div>
+            <div class="feature">Full access to all features</div>
+            <div class="feature">Email support</div> -->
+        <!-- </div> -->
+        <!-- <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-80"> -->
+            <h2 class="text-xl font-bold mb-4">Flat Rate for Teams of All Sizes</h2>
+            <p class="text-2xl text-green-500 font-bold">$10 / month</p>
+            <ul class="list-none pl-8 text-left mt-4">
+                <li><span class="tick">&#10003;</span> Unlimited snoozes</li>
+                <li><span class="tick">&#10003;</span> Full access to all features</li>
+                <li><span class="tick">&#10003;</span> Email support</li>
+            </ul>
+        <!-- </div> -->
     </main>
-    <footer class="text-center p-4">
-        © 2024 Aidan Sheehan. All rights reserved.
+    <footer class="bg-gray-200 text-center p-4 mt-8 bottom-0 w-full">
+        <p>© 2024 Aidan Sheehan. All rights reserved.</p>
     </footer>
     <script>
         const menuBtn = document.getElementById('menu-btn');
