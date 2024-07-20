@@ -40,7 +40,7 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-blue-600 text-white p-4 fixed w-full">
+    <header class="bg-blue-600 text-white p-4 fixed w-full" id="siteHeader">
         <div class="container mx-auto flex justify-between items-center">
             <nav class="hidden md:flex space-x-4 items-center justify-between w-full">
                 <ul class="flex space-x-4">
@@ -103,7 +103,7 @@
         </section>
 
     </main>
-    <footer class="bg-gray-200 text-center p-4 mt-8 bottom-0 w-full">
+    <footer class="bg-gray-200 text-center p-4 mt-8 bottom-0 w-full" id="siteFooter">
         <p>© 2024 Aidan Sheehan. All rights reserved.</p>
     </footer>
     <script>
@@ -114,6 +114,14 @@
             menu.classList.toggle('hidden');
             menu.classList.toggle('block');
         });
+
+        // Hide header & footer if displayed in iframe
+
+        if (new URLSearchParams(window.location.search).get('iframe') === 'true') {
+            document.getElementById('siteHeader').style.display = 'none';
+            document.getElementById('siteFooter').style.display = 'none';
+        }
+
     </script>
 </body>
 </html>
