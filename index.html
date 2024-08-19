@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +9,6 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-        }
-        body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -36,6 +33,7 @@
         }
         .important {
             color: #ef4444; /* Tailwind red-500 for emphasis */
+            font-weight: 600;
         }
     </style>
 </head>
@@ -88,20 +86,22 @@
             <a href="https://auth.monday.com/oauth2/authorize?client_id=b4c8fabdeb58d5ccb9f8666de1fab530&redirect_uri=https://vmtvusnlryosngbadnkr.supabase.co/functions/v1/auth" class="text-blue-500 hover:underline">Authenticate the App</a>
         </section>
         <section class="step">
-            <h2 class="text-xl font-bold mb-2">Step 3: Using the App</h2>
-            <p>Click on the three dots next to an item and select <span class="important">'Snooze'</span>. Choose the time to snooze the item for and click <span class="important">'Snooze'</span>.</p>
-            <!-- Placeholder for images -->
-            <div><img src="images/step-1.png" alt="Step 3 Image 1 - Click 3 dots" class="step-img"></div>
-            <div><img src="images/step-2.png" alt="Step 3 Image 2 - Menu Open" class="step-img"></div>
+            <h2 class="text-xl font-bold mb-2">Step 3: Snoozing an Item</h2>
+            <p>Click on the three dots next to an individual item and select <span class="important">Snooze</span>. Choose the time to snooze the item for and click <span class="important">Snooze</span>.</p>
+            <div><img src="images/step-1.png" alt="Snoozing an individual item" class="step-img"></div>
         </section>
         <section class="step">
-            <h2 class="text-xl font-bold mb-2">Step 4: Team Visibility and Notification</h2>
-            <p>Once an item is snoozed, it will be marked accordingly, and your team can see that it has been snoozed. This helps manage expectations and keeps everyone informed about task statuses without manual updates.</p>
+            <h2 class="text-xl font-bold mb-2">Step 4: Snoozing Multiple Items</h2>
+            <p>Select multiple items on your board, click on 'Apps' in the multi-item toolbar, and choose <span class="important">Snooze</span>. Use the datetime picker to set the snooze duration and confirm.</p>
+            <div><img src="images/step-multi-snooze.png" alt="Snoozing multiple items" class="step-img"></div>
+        </section>
+        <section class="step">
+            <h2 class="text-xl font-bold mb-2">Step 5: Team Visibility and Notification</h2>
+            <p>Once items are snoozed, they will be marked accordingly, and your team can see that they have been snoozed. This helps manage expectations and keeps everyone informed about task statuses without manual updates.</p>
             <div><img src="images/step-3.png" alt="Snoozed Item Visibility" class="step-img"></div>
-            <p>When the snooze period expires, the item returns to its original state and a notification is sent to remind you to address the item. This ensures that nothing slips through the cracks.</p>
+            <p>When the snooze period expires, the items return to their original state and a notification is sent to remind you to address the items. This ensures that nothing slips through the cracks.</p>
             <div><img src="images/step-4.png" alt="Notification of Item Return" class="step-img"></div>
         </section>
-
     </main>
     <footer class="bg-gray-200 text-center p-4 mt-8 bottom-0 w-full" id="siteFooter">
         <p>© 2024 Atomic Apps. All rights reserved.</p>
@@ -121,7 +121,6 @@
             document.getElementById('siteHeader').style.display = 'none';
             document.getElementById('siteFooter').style.display = 'none';
         }
-
     </script>
 </body>
 </html>
