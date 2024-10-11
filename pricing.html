@@ -135,46 +135,29 @@
         <!-- Pricing Tables -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-2.5">
             <div class="pricing-table">
-                <h2 class="pricing-header text-xl mb-4">1 Seat</h2>
-                <p class="price" id="price-1">$3/month</p>
-                <p id="billing-1" class="billed-yearly">Billed yearly at $36</p>
-            </div>
-
-            <div class="pricing-table">
-                <h2 class="pricing-header text-xl mb-4">2-5 Seats</h2>
-                <p class="price" id="price-2">$6/month</p>
-                <p id="billing-2" class="billed-yearly">Billed yearly at $72</p>
+                <h2 class="pricing-header text-xl mb-4">1-5 Seats</h2>
+                <p class="price" id="price-1">$4/month</p>
+                <p id="billing-1" class="billed-yearly">Billed yearly at $48</p>
             </div>
 
             <div class="pricing-table">
                 <h2 class="pricing-header text-xl mb-4">6-15 Seats</h2>
-                <p class="price" id="price-3">$12/month</p>
-                <p id="billing-3" class="billed-yearly">Billed yearly at $144</p>
+                <p class="price" id="price-2">$8/month</p>
+                <p id="billing-2" class="billed-yearly">Billed yearly at $96</p>
             </div>
 
             <div class="pricing-table">
-                <h2 class="pricing-header text-xl mb-4">16-30 Seats</h2>
-                <p class="price" id="price-4">$19/month</p>
-                <p id="billing-4" class="billed-yearly">Billed yearly at $228</p>
+                <h2 class="pricing-header text-xl mb-4">16-50 Seats</h2>
+                <p class="price" id="price-3">$16/month</p>
+                <p id="billing-3" class="billed-yearly">Billed yearly at $192</p>
             </div>
 
             <div class="pricing-table">
-                <h2 class="pricing-header text-xl mb-4">31-49 Seats</h2>
-                <p class="price" id="price-5">$39/month</p>
-                <p id="billing-5" class="billed-yearly">Billed yearly at $468</p>
+                <h2 class="pricing-header text-xl mb-4">50+ Seats</h2>
+                <p class="price" id="price-4">$39/month</p>
+                <p id="billing-4" class="billed-yearly">Billed yearly at $468</p>
             </div>
 
-            <div class="pricing-table">
-                <h2 class="pricing-header text-xl mb-4">50-99 Seats</h2>
-                <p class="price" id="price-6">$59/month</p>
-                <p id="billing-6" class="billed-yearly">Billed yearly at $708</p>
-            </div>
-
-            <div class="pricing-table">
-                <h2 class="pricing-header text-xl mb-4">100+ Seats</h2>
-                <p class="price" id="price-7">$99/month</p>
-                <p id="billing-7" class="billed-yearly">Billed yearly at $1188</p>
-            </div>
         </section>
     </main>
 
@@ -190,26 +173,20 @@
             menu.classList.toggle('hidden');
             menu.classList.toggle('block');
         });
-        // Prices for both monthly and yearly plans
+
         const yearlyPrices = {
-            "price-1": "$3/month", "billing-1": "Billed yearly at $36",
-            "price-2": "$6/month", "billing-2": "Billed yearly at $72",
-            "price-3": "$12/month", "billing-3": "Billed yearly at $144",
-            "price-4": "$19/month", "billing-4": "Billed yearly at $228",
-            "price-5": "$39/month", "billing-5": "Billed yearly at $468",
-            "price-6": "$59/month", "billing-6": "Billed yearly at $708",
-            "price-7": "$99/month", "billing-7": "Billed yearly at $1188"
-        };
+            "price-1": "$4/month", "billing-1": "Billed yearly at $48",
+            "price-2": "$8/month", "billing-2": "Billed yearly at $96",
+            "price-3": "$16/month", "billing-3": "Billed yearly at $192",
+            "price-4": "$39/month", "billing-4": "Billed yearly at $468"
+        }
 
         const monthlyPrices = {
-            "price-1": "$4/month", "billing-1": "Billed monthly at $4",
-            "price-2": "$8/month", "billing-2": "Billed monthly at $8",
-            "price-3": "$15/month", "billing-3": "Billed monthly at $15",
-            "price-4": "$25/month", "billing-4": "Billed monthly at $25",
-            "price-5": "$49/month", "billing-5": "Billed monthly at $49",
-            "price-6": "$75/month", "billing-6": "Billed monthly at $75",
-            "price-7": "$120/month", "billing-7": "Billed monthly at $120"
-        };
+            "price-1": "$5/month", "billing-1": "Billed monthly at $5",
+            "price-2": "$10/month", "billing-2": "Billed monthly at $10",
+            "price-3": "$20/month", "billing-3": "Billed monthly at $20",
+            "price-4": "$49/month", "billing-4": "Billed monthly at $49"
+        }
 
         let isYearly = true;
 
