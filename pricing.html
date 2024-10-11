@@ -32,7 +32,7 @@
             font-weight: bold;
             color: #fbbf24; /* Tailwind amber-400 */
         }
-        .toggle-container {
+        /* .toggle-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,14 +60,31 @@
         }
         .toggle-switch.active {
             background-color: #10b981;
-        }
-        .toggle-switch.active::after {
+        } */
+        /* .toggle-switch.active::after {
             left: 26px;
         }
         .toggle-label {
             margin-left: 10px;
             font-weight: bold;
-        }
+        } */
+        .pricing-option {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.pricing-option.active {
+    background-color: #10b981; /* Tailwind green */
+    color: white;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
         .billed-yearly {
             visibility: hidden;
             transition: visibility 0.3s ease;
@@ -76,12 +93,32 @@
             visibility: visible;
         }
 
+        .savings-banner {
+    background-color: #fbbf24; /* Tailwind amber-400 */
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    /* border-radius: 5px; */
+    margin-bottom: 14px;
+    position: fixed;
+    top: 72px;
+    width: 100%;
+    z-index: 49;
+}
+/* 
+.hidden {
+    display: none;
+} */
+
+
         /* Always show yearly bill on mobile */
         @media (max-width: 768px) {
             .billed-yearly {
                 visibility: visible;
             }
         }
+        
     </style>
 </head>
 <body class="bg-gray-100">
@@ -122,15 +159,23 @@
         </nav>
     </header>
 
-    <main class="container mx-auto mt-28">
+    <div id="savingsBanner" class="savings-banner">
+        Save 20% with an annual subscription!
+    </div>
+
+    <main class="container mx-auto mt-40">
         <h1 class="text-lg font-bold text-center mb-8">Snooze App Pricing</h1>
 
         <!-- Toggle Switch -->
-        <div class="toggle-container">
+        <!-- <div class="toggle-container">
             <span>Monthly</span>
             <div id="toggleSwitch" class="toggle-switch"></div>
             <span class="toggle-label">Yearly</span>
-        </div>
+        </div> -->
+        <div class="toggle-container">
+            <button id="monthlyBtn" class="pricing-option">Monthly</button>
+            <button id="yearlyBtn" class="pricing-option active">Yearly</button>
+        </div>    
 
         <!-- Pricing Tables -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-2.5">
@@ -190,19 +235,42 @@
 
         let isYearly = true;
 
-        // Toggle between yearly and monthly pricing
-        const toggleSwitch = document.getElementById('toggleSwitch');
-        toggleSwitch.classList.add('active')
-        toggleSwitch.addEventListener('click', function () {
-            isYearly = !isYearly;
-            console.log('isYearly: ', isYearly);
-            toggleSwitch.classList.toggle('active');
-            const prices = isYearly ? yearlyPrices : monthlyPrices;
-            for (const [id, price] of Object.entries(prices)) {
-                document.getElementById(id).textContent = price;
-            }
-            // isYearly = !isYearly;
-        });
+        const monthlyBtn = document.getElementById('monthlyBtn');
+const yearlyBtn = document.getElementById('yearlyBtn');
+
+monthlyBtn.addEventListener('click', () => {
+    isYearly = false;
+    monthlyBtn.classList.add('active');
+    yearlyBtn.classList.remove('active');
+    updatePrices(monthlyPrices);
+});
+
+yearlyBtn.addEventListener('click', () => {
+    isYearly = true;
+    yearlyBtn.classList.add('active');
+    monthlyBtn.classList.remove('active');
+    updatePrices(yearlyPrices);
+});
+
+function updatePrices(prices) {
+    for (const [id, price] of Object.entries(prices)) {
+        document.getElementById(id).textContent = price;
+    }
+}
+
+        // // Toggle between yearly and monthly pricing
+        // const toggleSwitch = document.getElementById('toggleSwitch');
+        // toggleSwitch.classList.add('active')
+        // toggleSwitch.addEventListener('click', function () {
+        //     isYearly = !isYearly;
+        //     console.log('isYearly: ', isYearly);
+        //     toggleSwitch.classList.toggle('active');
+        //     const prices = isYearly ? yearlyPrices : monthlyPrices;
+        //     for (const [id, price] of Object.entries(prices)) {
+        //         document.getElementById(id).textContent = price;
+        //     }
+        //     // isYearly = !isYearly;
+        // });
     </script>
 </body>
 </html>
